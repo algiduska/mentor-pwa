@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../assets/icons/travel.png';
-import './App.css';
+import './App.scss';
 import Routes from '../../routes/Routes';
 import { Link } from 'react-router-dom';
 
