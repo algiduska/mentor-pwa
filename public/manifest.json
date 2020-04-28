@@ -1,9 +1,9 @@
 {
-  "short_name": "FlyDays",
-  "name": "FlyDays PWA for travel inspiration",
+  "short_name": "Mentor",
+  "name": "Mentoring for women wanting to join tech industry",
   "icons": [
     {
-      "src": "travel.png",
+      "src": "girl.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
