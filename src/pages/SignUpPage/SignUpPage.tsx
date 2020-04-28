@@ -1,12 +1,12 @@
 import React from 'react';
 import Container from '../../components/Container/Container';
 
-const AboutPage = () => {
+const SignUpPage = () => {
   return (
     <Container>
-      <h1>Welcome to about page</h1>
+      <h1>Sign up form</h1>
     </Container>
   );
 };
 
-export default AboutPage;
+export default SignUpPage;

@@ -1,0 +1,21 @@
+.footer {
+  background-color: #41266d;
+  height: 2em;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &--text {
+    color: white;
+    padding: 0 1em;
+  }
+
+  &--logo {
+    height: 1.5em;
+    padding: 0 1em;
+  }
+}
