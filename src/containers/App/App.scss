@@ -1,4 +1,11 @@
-// TODO: delete or edit
-.App {
+@import '../../assets/styles/index.global.scss';
+
+.app {
   text-align: center;
+  position: relative;
+  min-height: 100vh; 
+}
+
+.content {
+  padding-bottom: $footerHeight;
 }

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lemonchiffon;
 }
 
 code {
@@ -12,5 +13,8 @@ code {
     monospace;
 }
 
-//TODO: fix this so that I can have a file for colours
+// colours
 $purpleMain: #7442c5;
+
+// other
+$footerHeight: 2em;

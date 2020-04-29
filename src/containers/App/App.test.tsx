@@ -5,7 +5,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { shallow } from 'enzyme';
 
 describe('App', () => {
-  test('renders flyDays logo', () => {
+  test('renders the logo', () => {
     const { getByAltText } = render(
       <MemoryRouter>
         <App />

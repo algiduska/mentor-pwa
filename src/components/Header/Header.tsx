@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 
 import logo from '../../assets/icons/girl.png';
 
-import './Header.scss';
+import styles from './Header.scss';
 
 const Header = () => (
-  <header className="header">
+  <header className={styles.header}>
     <Link to="/">
-      <img src={logo} className="header--logo" alt="logo" />
+      <img src={logo} className={styles.logo} alt="logo" />
     </Link>
-    <Link className="header--link" to="/">
+    <Link className={styles.link} to="/">
       Home
     </Link>
-    <Link className="header--link" to="/about">
+    <Link className={styles.link} to="/about">
       About
     </Link>
   </header>

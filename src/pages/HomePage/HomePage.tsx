@@ -1,13 +1,13 @@
 import React from 'react';
 
-import './HomePage.scss';
+import styles from './HomePage.scss';
 import Container from '../../components/Container/Container';
 import CustomLink from '../../components/CustomLink/CustomLink';
 
 const HomePage = () => {
   return (
     <>
-      <div className="banner"></div>
+      <div className={styles.banner}></div>
       <Container>
         <h1>Welcome to Mentoring For Women!</h1>
         <p>
