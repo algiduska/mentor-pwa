@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './CustomLink.scss';
+import styles from './CustomLink.scss';
 
 interface linkProps {
   children: string;
@@ -9,7 +9,7 @@ interface linkProps {
 }
 const CustomLink = ({ to, children }: linkProps) => {
   return (
-    <Link to={to} className="link">
+    <Link to={to} className={styles.link}>
       {children}
     </Link>
   );

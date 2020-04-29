@@ -1,13 +1,15 @@
 import React from 'react';
-import './App.scss';
+import styles from './App.scss';
 import Routes from '../../routes/Routes';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 
 const App = () => (
-  <div className="App">
+  <div className={styles.app}>
     <Header />
-    <Routes />
+    <div className={styles.content}>
+      <Routes />
+    </div>
     <Footer />
   </div>
 );

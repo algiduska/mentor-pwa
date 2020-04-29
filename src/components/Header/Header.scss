@@ -1,3 +1,8 @@
+// what does it do? 
+// :global(.header) {
+//   font-family: Verdana;
+// }
+
 .header {
   background-color: #7442c5;
   min-height: 4.063em;
@@ -6,17 +11,32 @@
   // justify-content: center;
   // font-size: calc(10px + 2vmin);
   color: white;
+}
 
-  &--logo {
+.logo {
     height: 2em;
     padding: 0.5em 1em;
   }
 
-  &--link {
-    padding: 1em;
-    color: white;
-  }
+.link {
+  padding: 1em;
+  color: white;    
+  text-decoration: none
 }
+
+// example of header properties with less BEM
+// '&:hover': {
+//       background: `linear-gradient(${theme.palette.common.white}, ${
+//         theme.palette.common.white
+//       }) bottom/ 100% ${theme.spacing(0.25)} no-repeat, transparent`,
+//     },
+//     '&--right': {
+//       marginLeft: 'auto',
+//       marginRight: 0,
+//     },
+//     '&--active': {
+//       color: theme.palette.common.white,
+//     },
 
 //   @media (prefers-reduced-motion: no-preference) {
 //     .App-logo {

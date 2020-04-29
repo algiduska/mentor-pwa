@@ -2,12 +2,12 @@ import React from 'react';
 
 import andSheCanLogo from '../../assets/icons/logo_white.png';
 
-import './Footer.scss';
+import styles from './Footer.scss';
 
 const Footer = () => (
-  <footer className="footer">
-    <p className="footer--text">Created by Naty Leitner</p>
-    <img className="footer--logo" src={andSheCanLogo} alt="AND SHE CAN" />
+  <footer className={styles.footer}>
+    <p className={styles.textLeft}>Created by Naty Leitner</p>
+    <img className={styles.logoRight} src={andSheCanLogo} alt="AND SHE CAN" />
   </footer>
 );
 

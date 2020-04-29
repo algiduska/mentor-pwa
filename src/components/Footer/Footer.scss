@@ -1,21 +1,23 @@
+@import '../../assets/styles/index.global.scss';
+
 .footer {
   background-color: #41266d;
-  height: 2em;
+  height: $footerHeight;
   width: 100%;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
 
-  &--text {
+.textLeft {
     color: white;
     padding: 0 1em;
   }
 
-  &--logo {
+.logoRight {
     height: 1.5em;
     padding: 0 1em;
   }
-}
