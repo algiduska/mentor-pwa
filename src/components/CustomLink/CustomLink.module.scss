@@ -1,6 +1,8 @@
+@import '../../assets/styles/index.scss';
+
 .link {
   display: inline-block;
-  background-color: #7442c5;
+  background-color: $purpleMain;
   color: white;
   padding: 0.8em;
   margin: 1em;

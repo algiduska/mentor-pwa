@@ -18,7 +18,7 @@ describe('HomePage', () => {
     const wrapper = shallow(<HomePage />);
 
     expect(wrapper.find('h1')).toHaveLength(1);
-    expect(wrapper.find('h3')).toHaveLength(1);
+    expect(wrapper.find('h2')).toHaveLength(1);
     expect(wrapper.find('p')).toHaveLength(3);
     expect(wrapper.find('CustomLink')).toHaveLength(1);
   });

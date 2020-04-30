@@ -1,10 +1,12 @@
-// what does it do? 
+@import '../../assets/styles/index.scss';
+
+// what does it do?
 // :global(.header) {
 //   font-family: Verdana;
 // }
 
 .header {
-  background-color: #7442c5;
+  background-color: $purpleMain;
   min-height: 4.063em;
   display: flex;
   align-items: center;
@@ -14,14 +16,14 @@
 }
 
 .logo {
-    height: 2em;
-    padding: 0.5em 1em;
-  }
+  height: 2em;
+  padding: 0.5em 1em;
+}
 
 .link {
   padding: 1em;
-  color: white;    
-  text-decoration: none
+  color: white;
+  text-decoration: none;
 }
 
 // example of header properties with less BEM

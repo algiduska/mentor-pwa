@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './App.scss';
+import styles from './App.module.scss';
 import Routes from '../../routes/Routes';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
@@ -7,9 +7,9 @@ import Footer from '../../components/Footer/Footer';
 const App = () => (
   <div className={styles.app}>
     <Header />
-    <div className={styles.content}>
+    <main className={styles.content}>
       <Routes />
-    </div>
+    </main>
     <Footer />
   </div>
 );
