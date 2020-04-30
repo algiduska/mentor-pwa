@@ -14,7 +14,7 @@ const HomePage = () => {
           Mentoring for women is here to connect women in the tech industry and
           females looking to join or learn about it.
         </p>
-        <h3>It's simple...</h3>
+        <h2>It's simple...</h2>
         <p>
           You will need to register and tell us about yourself in a simple form.
           Then you can look for mentors available, send them a connection

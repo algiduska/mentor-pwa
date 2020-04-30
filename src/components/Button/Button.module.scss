@@ -1,0 +1,36 @@
+@import '../../assets//styles/index.scss';
+
+.button {
+  display: inline-block;
+  padding: 0.8em;
+  margin: 1em;
+  border-radius: 5px;
+  border: 1px solid $purpleMain;
+  text-decoration: none;
+  font-size: 16px;
+  min-width: 6.5em;
+
+  &:disabled {
+    border-color: $purpleDisabled;
+  }
+}
+
+.buttonPrimary {
+  @extend .button;
+  background-color: $purpleMain;
+  color: white;
+
+  &:disabled {
+    background-color: $purpleDisabled;
+  }
+}
+
+.buttonSecondary {
+  @extend .button;
+  background-color: white;
+  color: $purpleMain;
+
+  &:disabled {
+    color: $purpleDisabled;
+  }
+}

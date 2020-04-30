@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Button.module.scss';
 
 export enum ButtonTypeEnum {
   Button = 'button', // The button is a clickable button
@@ -14,7 +15,12 @@ interface IButtonProps {
 }
 
 const Button = ({ onClick, type, disabled, children }: IButtonProps) => (
-  <button type={type} disabled={disabled} onClick={onClick}>
+  <button
+    type={type}
+    disabled={disabled}
+    onClick={onClick}
+    className={styles.buttonPrimary}
+  >
     {children}
   </button>
 );

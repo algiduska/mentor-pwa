@@ -7,9 +7,9 @@ import Footer from '../../components/Footer/Footer';
 const App = () => (
   <div className={styles.app}>
     <Header />
-    <div className={styles.content}>
+    <main className={styles.content}>
       <Routes />
-    </div>
+    </main>
     <Footer />
   </div>
 );

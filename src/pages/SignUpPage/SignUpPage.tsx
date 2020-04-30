@@ -4,6 +4,7 @@ import Container from '../../components/Container/Container';
 import { History } from 'history';
 import '../../assets/styles/forms.scss';
 import Button, { ButtonTypeEnum } from '../../components/Button/Button';
+import signUp from '../../validations/signUp';
 
 interface ISignUpPageProps {
   //for whatever reason this needs to be here instead of directly in signUpPage props - otherwise it says history.push is not a function
@@ -30,23 +31,7 @@ const SignUpPage = ({ history }: ISignUpPageProps) => {
       <h1>Sign up form</h1>
       <Formik<ISignUpFormValues>
         initialValues={{ email: '', password: '' }}
-        // TODO: use Yup for validation
-        validate={(values) => {
-          const errors: any = {};
-          if (!values.email) {
-            errors.email = 'Required';
-          } else if (
-            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-          ) {
-            errors.email = 'Invalid email address';
-          }
-          if (!values.password) {
-            errors.password = 'Required';
-          } else if (values.password.length < 8) {
-            errors.password = 'Password must be at least 8 characters long';
-          }
-          return errors;
-        }}
+        validationSchema={signUp}
         onSubmit={submitSignUp(history)}
       >
         {({
@@ -57,6 +42,7 @@ const SignUpPage = ({ history }: ISignUpPageProps) => {
           handleBlur,
           handleSubmit,
           isSubmitting,
+          isValid,
         }) => (
           <form onSubmit={handleSubmit}>
             {/* extract this label? */}
@@ -86,7 +72,10 @@ const SignUpPage = ({ history }: ISignUpPageProps) => {
                 <p className={'error'}>{errors.password}</p>
               )}
             </label>
-            <Button type={ButtonTypeEnum.Submit} disabled={isSubmitting}>
+            <Button
+              type={ButtonTypeEnum.Submit}
+              disabled={!isValid || isSubmitting}
+            >
               Submit
             </Button>
           </form>
