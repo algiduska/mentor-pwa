@@ -1,0 +1,30 @@
+@import './index.scss';
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em auto;
+  width: 60vw;
+  text-align: start;
+  height: 6em;
+  font-size: 14px;
+
+  @media (min-width: $tabletWidth) {
+    width: 447px;
+  }
+}
+
+input {
+  height: 2.5em;
+  border-radius: 5px;
+  padding: 0 0.5em;
+  margin-top: 0.5em;
+  border: 1px solid black;
+  font-size: 15px;
+}
+
+.error {
+  margin: 0.4em 0 0;
+  font-size: 10px;
+  color: rgb(148, 5, 5);
+}

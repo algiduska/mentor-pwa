@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './HomePage.scss';
+import styles from './HomePage.module.scss';
 import Container from '../../components/Container/Container';
 import CustomLink from '../../components/CustomLink/CustomLink';
 

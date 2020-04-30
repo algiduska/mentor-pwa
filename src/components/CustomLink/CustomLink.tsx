@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import styles from './CustomLink.scss';
+import styles from './CustomLink.module.scss';
 
 interface linkProps {
   children: string;

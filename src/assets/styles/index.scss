@@ -18,3 +18,11 @@ $purpleMain: #7442c5;
 
 // other
 $footerHeight: 2em;
+
+// responsiveness
+$phoneWidth: 640px;
+$tabletWidth: 768px;
+$desktopWidth: 1024px;
+
+// there is much more, need to consider retina screens as well - https://css-tricks.com/approaches-media-queries-sass/ & https://css-tricks.com/snippets/css/retina-display-media-query/
+
