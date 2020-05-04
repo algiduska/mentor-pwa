@@ -25,6 +25,7 @@ export const submitSignUp = (history: History) => (
   history.push('/');
 };
 
+// TODO: sign in page can have another button with 'sign up' link - this page needs some work
 const SignUpPage = ({ history }: ISignUpPageProps) => {
   return (
     <Container>
