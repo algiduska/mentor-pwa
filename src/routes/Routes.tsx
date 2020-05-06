@@ -6,6 +6,7 @@ import SignUpPage from '../pages/SignUpPage/SignUpPage';
 
 const Routes = () => (
   <Switch>
+    {/*  */}
     {/* have a redirect on '/' to go to correct home page */}
     {/* return (
     <Route
