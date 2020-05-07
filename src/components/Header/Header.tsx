@@ -10,8 +10,8 @@ const Header = () => (
     <Link to="/">
       <img src={logo} className={styles.logo} alt="logo" />
     </Link>
-    <Link className={styles.link} to="/">
-      Home
+    <Link className={styles.link} to="/dashboard">
+      Dashboard
     </Link>
     <Link className={styles.link} to="/about">
       About
