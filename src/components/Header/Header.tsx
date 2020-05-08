@@ -16,6 +16,9 @@ const Header = () => (
     <Link className={styles.link} to="/about">
       About
     </Link>
+    <Link className={styles.link} to="/events">
+      Events
+    </Link>
   </header>
 );
 

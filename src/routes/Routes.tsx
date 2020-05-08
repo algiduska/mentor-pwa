@@ -4,6 +4,7 @@ import AboutPage from '../pages/AboutPage/AboutPage';
 import DashboardPage from '../pages/DashboardPage/DashboardPage';
 import SignUpPage from '../pages/SignUpPage/SignUpPage';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
+import EventsPage from '../pages/EventsPage/EventsPage';
 
 const Routes = () => (
   <Switch>
@@ -20,6 +21,7 @@ const Routes = () => (
     />
     <Route exact path="/about" component={AboutPage} />
     <Route exact path="/dashboard" component={DashboardPage} />
+    <Route exact path="/events" component={EventsPage} />
     <Route exact path="/sign-up" component={SignUpPage} />
     <Route exact path="/error/:errorCode" component={ErrorPage} />
     <Route

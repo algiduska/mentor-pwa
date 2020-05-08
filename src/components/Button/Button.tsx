@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Button.module.scss';
+import classNames from 'classnames';
 
 export enum ButtonTypeEnum {
   Button = 'button', // The button is a clickable button
@@ -7,19 +8,30 @@ export enum ButtonTypeEnum {
   Reset = 'reset', // The button is a reset button (resets the form-data to its initial values)
 }
 
+export enum ButtonStyle {
+  primary,
+  secondary,
+}
+
 interface IButtonProps {
   onClick?: any;
   type: ButtonTypeEnum;
   children: string;
   disabled: boolean;
+  style?: ButtonStyle;
 }
 
-const Button = ({ onClick, type, disabled, children }: IButtonProps) => (
+const Button = ({ onClick, type, disabled, style, children }: IButtonProps) => (
   <button
     type={type}
     disabled={disabled}
     onClick={onClick}
-    className={styles.buttonPrimary}
+    className={classNames([
+      styles.buttonPrimary,
+      {
+        [`${styles.buttonSecondary}`]: style === ButtonStyle.secondary,
+      },
+    ])}
   >
     {children}
   </button>

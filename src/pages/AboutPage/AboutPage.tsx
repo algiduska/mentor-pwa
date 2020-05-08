@@ -9,7 +9,8 @@ const AboutPage = () => {
     <>
       <div className={styles.banner}></div>
       <Container>
-        <h1>Welcome to Mentoring For Women!</h1>
+        <h1 className="sr-only">Mentoring For Women!</h1>
+        <h2>So how does it work?</h2>
         <p>
           Mentoring for women is here to connect women in the tech industry and
           females looking to join or learn about it.
