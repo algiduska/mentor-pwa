@@ -9,6 +9,10 @@ const signUp = yup.object().shape({
     .string()
     .required('Password is a required field')
     .min(8, 'Password must be at least 8 characters long'),
+  passwordConfirm: yup
+    .string()
+    .oneOf([yup.ref('password')], 'Passwords do not match')
+    .required('You must confirm your password'),
 });
 
 export default signUp;

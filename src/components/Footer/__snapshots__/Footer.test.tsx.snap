@@ -1,3 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer should match the snapshot 1`] = `ShallowWrapper {}`;
+exports[`Footer should match the snapshot 1`] = `
+<footer
+  className="footer"
+>
+  <p
+    className="textLeft"
+  >
+    Created by Naty Leitner
+  </p>
+  <img
+    alt="AND SHE CAN"
+    className="logoRight"
+    src="logo_white.png"
+  />
+</footer>
+`;

@@ -5,7 +5,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { shallow } from 'enzyme';
 
 describe('App', () => {
-  test('renders the logo', () => {
+  it('should render the logo', () => {
     const { getByAltText } = render(
       <MemoryRouter>
         <App />
@@ -15,7 +15,7 @@ describe('App', () => {
     expect(logoElement).toBeInTheDocument();
   });
 
-  test('renders Routes', () => {
+  it('should render Routes', () => {
     const wrapper = shallow(<App />);
     expect(wrapper.find('Routes')).toHaveLength(1);
   });
