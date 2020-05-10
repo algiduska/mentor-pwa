@@ -27,7 +27,7 @@ describe('Mentor', () => {
     expect(wrapper.find('h3')).toHaveLength(1);
     expect(wrapper.find('h4')).toHaveLength(1);
     expect(wrapper.find('p')).toHaveLength(1);
-    expect(wrapper.find('small')).toHaveLength(mentor.keywords.length);
+    expect(wrapper.find('span')).toHaveLength(mentor.keywords.length);
     expect(wrapper.find('Button')).toHaveLength(1);
   });
 
@@ -36,7 +36,7 @@ describe('Mentor', () => {
     expect(wrapper.find('h3').prop('children')).toEqual(mentor.name);
     expect(wrapper.find('h4').prop('children')).toEqual(mentor.title);
     expect(wrapper.find('p').prop('children')).toEqual(mentor.description);
-    wrapper.find('small').forEach((element: any, index) => {
+    wrapper.find('span').forEach((element: any, index) => {
       expect(element.props('children').children).toEqual([
         '#',
         mentor.keywords[index],

@@ -26,7 +26,7 @@ const Mentor = (mentor: User) => {
       <p className={styles.description}>{mentor.description}</p>
       <div className={styles.keywords}>
         {mentor.keywords.map((keyword) => (
-          <small key={keyword}>#{keyword} </small>
+          <span key={keyword}>#{keyword} </span>
         ))}
       </div>
       <Button

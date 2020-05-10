@@ -19,7 +19,6 @@
 .head {
   display: flex;
   margin-right: 1em;
-  // flex-direction: ;
   img {
     height: 5em;
     border-radius: 20px;
@@ -41,16 +40,18 @@
     }
   }
 }
-
+// TODO: fixed heights must be refactored or taken into account with amount of text allowed
 .description {
   margin: 1em;
   font-size: 0.8em;
-  height: 12em;
+  height: 10em;
 }
 
 .keywords {
-  margin: 0.3em;
-  bottom: 3em;
-  width: 100%;
-  height: 40px;
+  margin: 0.3em 1em;
+  height: 2.5em;
+
+  span {
+    font-size: 0.8em;
+  }
 }
