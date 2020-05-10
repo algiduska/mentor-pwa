@@ -5,12 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: lemonchiffon;
+  background-color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  border: 0;
 }
 
 // colours
@@ -21,8 +33,10 @@ $purpleDisabled: #796894;
 $footerHeight: 2em;
 
 // responsiveness
-$phoneWidth: 640px;
-$tabletWidth: 768px;
+$phoneWidthEnd: 640px;
+$tabletWidthEnd: 768px;
+$tabletWidthStart: 641px;
+$desktopWidthStart: 769px;
 $desktopWidth: 1024px;
 
 // there is much more, need to consider retina screens as well - https://css-tricks.com/approaches-media-queries-sass/ & https://css-tricks.com/snippets/css/retina-display-media-query/

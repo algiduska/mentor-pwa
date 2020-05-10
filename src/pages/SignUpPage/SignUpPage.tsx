@@ -14,6 +14,7 @@ interface ISignUpPageProps {
 interface ISignUpFormValues {
   email: string;
   password: string;
+  passwordConfirm: string;
 }
 
 export const submitSignUp = (history: History) => (
@@ -30,7 +31,7 @@ const SignUpPage = ({ history }: ISignUpPageProps) => {
     <Container>
       <h1>Sign up form</h1>
       <Formik<ISignUpFormValues>
-        initialValues={{ email: '', password: '' }}
+        initialValues={{ email: '', password: '', passwordConfirm: '' }}
         validationSchema={signUp}
         onSubmit={submitSignUp(history)}
       >
@@ -70,6 +71,19 @@ const SignUpPage = ({ history }: ISignUpPageProps) => {
               />
               {errors.password && touched.password && (
                 <p className={'error'}>{errors.password}</p>
+              )}
+            </label>
+            <label>
+              Confirm password
+              <input
+                type="password"
+                name="passwordConfirm"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.passwordConfirm}
+              />
+              {errors.passwordConfirm && touched.passwordConfirm && (
+                <p className={'error'}>{errors.passwordConfirm}</p>
               )}
             </label>
             <Button

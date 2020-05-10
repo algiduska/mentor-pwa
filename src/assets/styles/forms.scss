@@ -4,12 +4,16 @@ label {
   display: flex;
   flex-direction: column;
   margin: 0.5em auto;
-  width: 60vw;
+  width: 70vw;
   text-align: start;
   height: 6em;
   font-size: 14px;
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tabletWidthStart) {
+    width: 50vw;
+  }
+
+  @media (min-width: $desktopWidthStart) {
     width: 447px;
   }
 }

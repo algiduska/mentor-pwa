@@ -12,17 +12,18 @@ describe('Header', () => {
   });
 
   it('should have correct amount of Link elements', () => {
-    expect(links).toHaveLength(3);
+    expect(links).toHaveLength(4);
   });
 
   it('should have correct link on a link element', () => {
-    const expectedLinks = ['/', '/', '/about'];
+    const expectedLinks = ['/', '/dashboard', '/about', '/events'];
     const actualLinks = links.map((linkElement: any) => linkElement.props().to);
     expect(actualLinks).toEqual(expectedLinks);
   });
 
   it('should have correct name on navigation bar', () => {
-    expect(links.at(1).props().children).toEqual('Home');
+    expect(links.at(1).props().children).toEqual('Dashboard');
     expect(links.at(2).props().children).toEqual('About');
+    expect(links.at(3).props().children).toEqual('Events');
   });
 });
