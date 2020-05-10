@@ -1,73 +1,37 @@
 import React from 'react';
-import Mentor, { User } from '../../components/Mentor/Mentor';
+import Mentor from '../../components/Mentor/Mentor';
 import Container from '../../components/Container/Container';
 import styles from './DashboardPage.module.scss';
+import {
+  IMentor,
+  IGetAllMentorsResponse,
+  GET_ALL_MENTORS,
+} from '../../graphql/mentor/queries';
+import { useQuery } from '@apollo/react-hooks';
+import { Redirect } from 'react-router-dom';
 
 const DashboardPage = () => {
-  const mentors: User[] = [
+  const { loading, data, error } = useQuery<IGetAllMentorsResponse>(
+    GET_ALL_MENTORS,
     {
-      name: 'Natalia Leitnerova',
-      title: 'Product Developer',
-      description:
-        "Studied Bc Business and Marketing but realising it's not a right fit. After identifying tech industry as a potential place to be, did conversion masters and started a job right after the degree.",
-      keywords: ['travel', 'hiking', 'skiing'],
-      profileImage: null,
-      email: 'nleitnerova@and.digital',
-      isMentor: true,
-    },
-    {
-      name: 'Luna Lovegood',
-      title: 'UX Designer',
-      description:
-        'Self-taught from videos online. Learning is so easy these days! ',
-      keywords: [
-        'painting',
-        'nature',
-        'people',
-        'colourful socks',
-        'jewelry making',
-      ],
-      profileImage: null,
-      email: 'luna@and.digital',
-      isMentor: true,
-    },
-    {
-      name: 'Hermione Granger',
-      title: 'Scrum Master',
-      description:
-        "Studied Bc Business and Marketing but realising it's not a right fit. After identifying tech industry as a potential place to be, did conversion masters and started a job right after the degree. In the future I want to become a CEO of a big company, earn a lot of money and donate it along with my time to charity that deals with education in Asia. I will need to work hard for all this.",
-      keywords: [
-        'painting',
-        'nature',
-        'people',
-        'colourful socks',
-        'jewelry making',
-      ],
-      profileImage: null,
-      email: 'hermione@and.digital',
-      isMentor: true,
-    },
-    {
-      name: 'Tom Marvolo Riddle Riddle Riddle',
-      title: 'Currency Rotation Specialist',
-      description:
-        "Studied Bc Business and Marketing but realising it's not a right fit. After identifying tech industry as a potential place to be, did conversion masters and started a job right after the degree.",
-      keywords: ['travel', 'hiking', 'skiing'],
-      profileImage: null,
-      email: 'voldemort@and.digital',
-      isMentor: true,
-    },
-    {
-      name: 'Minerva McGonagall',
-      title: 'Product Analyst',
-      description:
-        "Studied Bc Business and Marketing but realising it's not a right fit. After identifying tech industry as a potential place to be, did conversion masters and started a job right after the degree.",
-      keywords: ['travel', 'hiking', 'skiing'],
-      profileImage: null,
-      email: 'minerva@and.digital',
-      isMentor: true,
-    },
-  ];
+      errorPolicy: 'all',
+    }
+  );
+
+  console.log(data, error);
+
+  const hasErrorAndNoData = error && !(data && data.allMentors);
+  const noErrorAndNoData = !error && !(data && data.allMentors);
+
+  if (!loading && (hasErrorAndNoData || noErrorAndNoData))
+    return (
+      <Redirect
+        to={{
+          pathname: '/error/404',
+        }}
+      />
+    );
+
   return (
     <Container>
       <h1 className="sr-only">
@@ -75,9 +39,10 @@ const DashboardPage = () => {
       </h1>
       <h2>Mentors</h2>
       <ul className={styles.wrapper}>
-        {mentors.map((user: User) => (
-          <Mentor {...user} key={user.email} />
-        ))}
+        {data &&
+          data.allMentors.map((mentor: IMentor) => (
+            <Mentor {...mentor} key={mentor.email} />
+          ))}
       </ul>
     </Container>
   );

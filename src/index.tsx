@@ -5,11 +5,27 @@ import App from './containers/App/App';
 import * as serviceWorker from './serviceWorker';
 import { Router } from 'react-router-dom';
 import history from './routes/history';
+import { ApolloClient } from 'apollo-client';
+import { InMemoryCache, NormalizedCacheObject } from 'apollo-cache-inmemory';
+import { HttpLink } from 'apollo-link-http';
+import { ApolloProvider } from '@apollo/react-hooks';
+
+const cache = new InMemoryCache();
+const link = new HttpLink({
+  uri: 'http://localhost:5000/graphql',
+});
+
+const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
+  cache,
+  link,
+});
 
 ReactDOM.render(
-  <Router history={history}>
-    <App />
-  </Router>,
+  <ApolloProvider client={client}>
+    <Router history={history}>
+      <App />
+    </Router>
+  </ApolloProvider>,
   document.getElementById('root')
 );
 
