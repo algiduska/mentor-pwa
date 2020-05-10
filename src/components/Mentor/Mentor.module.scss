@@ -4,15 +4,14 @@
   width: 322px;
   display: flex;
   flex-direction: column;
-  margin: 24px;
+  margin: 24px 12px;
   border-radius: 10px;
   background: $purpleMain;
   color: white;
   position: relative;
 
-  //TODO: should be mobile first
-  @media (max-width: $phoneWidth) {
-    margin: 24px 0;
+  @media (min-width: $desktopWidthStart) {
+    margin: 24px;
   }
 }
 

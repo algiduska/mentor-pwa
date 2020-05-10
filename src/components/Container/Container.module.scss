@@ -1,6 +1,12 @@
+@import '../../assets/styles';
+
 .container {
   max-width: '1140px';
   margin: '0 auto';
-  padding: 0 3.75em;
+  padding: 0 2em;
   width: '100%';
+
+  @media (min-width: $desktopWidthStart) {
+    padding: 0 3.75em;
+  }
 }

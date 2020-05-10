@@ -33,8 +33,10 @@ $purpleDisabled: #796894;
 $footerHeight: 2em;
 
 // responsiveness
-$phoneWidth: 640px;
-$tabletWidth: 768px;
+$phoneWidthEnd: 640px;
+$tabletWidthEnd: 768px;
+$tabletWidthStart: 641px;
+$desktopWidthStart: 769px;
 $desktopWidth: 1024px;
 
 // there is much more, need to consider retina screens as well - https://css-tricks.com/approaches-media-queries-sass/ & https://css-tricks.com/snippets/css/retina-display-media-query/
